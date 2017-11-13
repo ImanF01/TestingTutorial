@@ -12,6 +12,7 @@
 		5F1614141FB92A4900CA4F57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F1614121FB92A4900CA4F57 /* Main.storyboard */; };
 		5F1614161FB92A4900CA4F57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F1614151FB92A4900CA4F57 /* Assets.xcassets */; };
 		5F1614191FB92A4900CA4F57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F1614171FB92A4900CA4F57 /* LaunchScreen.storyboard */; };
+		5F1614211FB92C2B00CA4F57 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1614201FB92C2B00CA4F57 /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		5F1614151FB92A4900CA4F57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F1614181FB92A4900CA4F57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F16141A1FB92A4900CA4F57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F1614201FB92C2B00CA4F57 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				5F16140E1FB92A4900CA4F57 /* AppDelegate.swift */,
 				5F1614101FB92A4900CA4F57 /* ViewController.swift */,
 				5F1614121FB92A4900CA4F57 /* Main.storyboard */,
+				5F1614201FB92C2B00CA4F57 /* PageViewController.swift */,
 				5F1614151FB92A4900CA4F57 /* Assets.xcassets */,
 				5F1614171FB92A4900CA4F57 /* LaunchScreen.storyboard */,
 				5F16141A1FB92A4900CA4F57 /* Info.plist */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F1614211FB92C2B00CA4F57 /* PageViewController.swift in Sources */,
 				5F1614111FB92A4900CA4F57 /* ViewController.swift in Sources */,
 				5F16140F1FB92A4900CA4F57 /* AppDelegate.swift in Sources */,
 			);
@@ -302,6 +306,7 @@
 				5F16141F1FB92A4900CA4F57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
