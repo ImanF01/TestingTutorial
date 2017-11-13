@@ -12,8 +12,12 @@ class PageViewController: UIPageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.dataSource = self
+        
+        if let startTutorialVC = self.viewControllerAtIndex(index: 0) {
+            setViewControllers([startTutorialVC], direction: .forward, animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +25,42 @@ class PageViewController: UIPageViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func nextPageWithIndex(index: Int)
+    {
+        return
     }
-    */
+    func viewControllerAtIndex(index: Int) -> ViewController?
+    {
+        if index == NSNotFound || index < 0 {
+        //add index > number of pages
+            return nil
+        }
+        if let viewController = storyboard?.instantiateViewController(withIdentifier: "viewController")
+            as? ViewController
+        {
+            viewController.index = index
+            
+            return viewController
+        }
+        return nil
+    }
 
+}
+extension PageViewController: UIPageViewControllerDataSource
+{
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        var index = (viewController as! ViewController).index
+        index -= 1
+        
+        return self.viewControllerAtIndex(index: index)
+    }
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        
+        var index = (viewController as! ViewController).index
+        index += 1
+        
+        return self.viewControllerAtIndex(index: index)
+    }
+    
+    
 }
